@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UrbanCart | Online Shopping</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="urbancart-logo.png">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">UrbanCart</div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products...">
+      <button onclick="searchProducts()">🔍</button>
+    </div>
+
+    <div class="nav-links">
+      <a href="#" id="loginBtn">Login</a>
+      <a href="#" id="registerBtn">Register</a>
+      <a href="#wishlist">❤️ Wishlist</a>
+      <a href="#cart">🛒 Cart</a>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <h1>Welcome to UrbanCart</h1>
+    <p>Everything you need, delivered fast!</p>
+    <button class="shop-now">Shop Now</button>
+  </section>
+
+  <!-- Product Section -->
+  <section id="products" class="section">
+    <h2>Featured Products</h2>
+    <div class="product-grid" id="productGrid">
+      <!-- JS will generate products here -->
+    </div>
+  </section>
+
+  <!-- Wishlist Section -->
+  <section id="wishlist" class="section">
+    <h2>Your Wishlist ❤️</h2>
+    <div id="wishlistItems"></div>
+  </section>
+
+  <!-- Cart Section -->
+  <section id="cart" class="section">
+    <h2>Your Cart 🛒</h2>
+    <div id="cartItems"></div>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('loginModal')">&times;</span>
+      <h2>Login</h2>
+      <form onsubmit="return validateLogin()">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('registerModal')">&times;</span>
+      <h2>Register</h2>
+      <form onsubmit="return validateRegister()">
+        <input type="text" id="regName" placeholder="Full Name" required>
+        <input type="email" id="regEmail" placeholder="Email" required>
+        <input type="password" id="regPass" placeholder="Password" required>
+        <input type="password" id="regConfirm" placeholder="Confirm Password" required>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 UrbanCart. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

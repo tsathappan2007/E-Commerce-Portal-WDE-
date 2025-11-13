@@ -1,0 +1,171 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #f2f3f5;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #232f3e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+}
+
+.logo {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #ff9900;
+}
+
+.search-bar {
+  display: flex;
+  width: 40%;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+  background: #febd69;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #febd69;
+}
+
+/* Hero */
+.hero {
+  background: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.shop-now {
+  background: #febd69;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Products */
+.section {
+  margin: 40px auto;
+  width: 90%;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  background: #fafafa;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card button {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-now {
+  background: #ff9900;
+  color: white;
+}
+
+.add-cart {
+  background: #232f3e;
+  color: white;
+}
+
+.add-wishlist {
+  background: #e91e63;
+  color: white;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 10% auto;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 10px; top: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.modal input, .modal button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/* Footer */
+footer {
+  background: #232f3e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
